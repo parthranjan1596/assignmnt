@@ -1,0 +1,35 @@
+                   LONGEST INCREASING SUBSEQUENCE
+                ---------------------------------------
+    INTRODUCTION :
+    finding the sequence which is increasing in order and might not be contiguous is called longest increasing subsequence.
+    It is a dynamic programing problem and there are three way to solve this with different complexities.
+   
+    
+    APPROACH 1
+    ------------
+    It is a simple recurssive way to solve .means check for every subsequence is this increasing or not and among these subsequences which 
+    have maximum lenght will be the desired subsequence.
+    
+    L(i) = 1 + max(l(j))   where 0 < j < i  and arr[j] < arr[i];
+     = 1               if no such j exits
+     
+     APPROACH 2
+     ------------
+     
+     In this approach we use the tabuation method to avoid the calculation of repeated subproblems.
+     1. we take ana array of same lenght with initialization with 1 ,to store the lenght of increasing subsequence upto that index.
+     2. get maximum element from the array, that is the lenght of longest increasing subsequence of the given sequence
+     this will take O(n^2) time.And O(N) space complexity..
+    
+     APPRAOACH 3
+     ---------------
+     This approach will take O(NlogN).And this is the best way to get longest increasing subsequence in term of complexity.
+     To implement this we take two temporary array T and R. T is for storing temporary intermediate result anf R for storing final result
+     Variable name len for heighest lenght till now..
+     
+     
+    Aplication of longest increasing subsequence
+    ---------------------------------------------
+    It is used to find the clique in a parmutation graph.
+    CLIQUE : clique is the set of vertices which are adjacent to each other..
+    means if we have set of towns then it will used to get the set of towns which have direct train or direct path among each other..
